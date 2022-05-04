@@ -12,13 +12,8 @@ namespace Lab4
         {
             audioList = new List<File<AudioExtension>>()
             {
-            new File<AudioExtension>("file1", 9.0, FileType.audio, AudioExtension.ogg),
-            new File<AudioExtension>("file1", 0.1, FileType.audio, AudioExtension.ogg),
-            new File<AudioExtension>("file1", 2.2, FileType.audio, AudioExtension.ogg),
             new File<AudioExtension>("file1", 3.3, FileType.audio, AudioExtension.mp3),
             new File<AudioExtension>("file1", 4.4, FileType.audio, AudioExtension.mp3),
-            new File<AudioExtension>("file1", 1.2, FileType.audio, AudioExtension.mp3),
-            new File<AudioExtension>("file1", 3.4, FileType.audio, AudioExtension.mp3),
             };
         }
 
@@ -53,6 +48,58 @@ namespace Lab4
             foreach (var item in audioList)
             {
                 if (item.fileSize < min) min = item.fileSize;
+            }
+            return min;
+        }
+
+        public int getSpecificCount(AudioExtension extension)
+        {
+            int count = 0;
+            foreach (var item in audioList)
+            {
+                if (item.extension == extension) count++;
+            }
+            return count;
+        }
+
+        public double getSpecificSize(AudioExtension extension)
+        {
+            double size = 0;
+            foreach (var item in audioList)
+            {
+                if (item.extension == extension) size += item.fileSize;
+            }
+            return Math.Round(size, 2);
+        }
+        public double getSpecificAvg(AudioExtension extension)
+        {
+            double size = 0;
+            foreach (var item in audioList)
+            {
+                if (item.extension == extension) size += item.fileSize;
+            }
+            return Math.Round(size / getSpecificCount(extension));
+        }
+
+        public double getSpecificMaxValue(AudioExtension extension)
+        {
+            double max = 0.0;
+
+            foreach (var item in audioList)
+            {
+                if (item.extension == extension)
+                    if (item.fileSize > max) max = item.fileSize;
+            }
+            return max;
+        }
+        public double getSpecificMinValue(AudioExtension extension)
+        {
+            double min = 10000000000000;
+
+            foreach (var item in audioList)
+            {
+                if (item.extension == extension)
+                    if (item.fileSize < min) min = item.fileSize;
             }
             return min;
         }
