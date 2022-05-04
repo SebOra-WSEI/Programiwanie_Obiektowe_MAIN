@@ -103,6 +103,62 @@ namespace Lab4
             }
             return min;
         }
+
+        public int getCountBySize(double size1, double size2)
+        {
+            int count = 0;
+            foreach (var item in audioList)
+            {
+                if (item.fileSize >= size1 && item.fileSize <= size2) count++;
+            }
+            return count;
+        }
+
+        public double getSizeBySize(double size1, double size2)
+        {
+            double size = 0;
+            foreach (var item in audioList)
+            {
+                if (item.fileSize >= size1 && item.fileSize <= size2) size += item.fileSize;
+            }
+            return Math.Round(size, 2);
+        }
+
+        public double getAvgBySize(double size1, double size2)
+        {
+            double size = 0.0;
+            foreach (var item in audioList)
+            {
+                if (item.fileSize >= size1 && item.fileSize <= size2) size += item.fileSize;
+            }
+            var result = Math.Round(size / getCountBySize(size1, size2), 2);
+            if (result >= 0)
+                return result;
+
+            return 0;
+        }
+        public double getSpecificMaxValueBySize(double size1, double size2)
+        {
+            double max = 0.0;
+            foreach (var item in audioList)
+            {
+                if (item.fileSize >= size1 && item.fileSize <= size2)
+                    if (item.fileSize > max) max = item.fileSize;
+            }
+            return Math.Round(max, 2);
+        }
+
+        public double getSpecificMinValueBySize(double size1, double size2)
+        {
+            double min = 10000;
+            foreach (var item in audioList)
+            {
+                if (item.fileSize >= size1 && item.fileSize <= size2)
+                    if (item.fileSize < min) min = item.fileSize;
+            }
+            if (min == 10000) min = 0;
+            return Math.Round(min, 2);
+        }
     }
 }
 

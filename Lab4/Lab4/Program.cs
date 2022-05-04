@@ -8,9 +8,11 @@ namespace Lab4
         {
             var byTypes = new ByType();
             var byExtension = new ByExtension();
+            var bySizes = new BySizes();
 
             Console.WriteLine(byTypes.ToString());
             Console.WriteLine(byExtension.ToString());
+            Console.WriteLine(bySizes.ToString());
         }
     }
 }
