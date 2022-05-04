@@ -7,11 +7,8 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            var x = new ByType();
-            Console.WriteLine(x);
-
-
-
+            var byTypes = new ByType();
+            Console.WriteLine(byTypes.ToString());
 
 
 

@@ -32,7 +32,7 @@ namespace Lab4
         public double getSize()
         {
             foreach (var item in imageList) { size += item.fileSize; }
-            return size;
+            return Math.Round(size, 2);
         }
 
         public double AvgSize()
