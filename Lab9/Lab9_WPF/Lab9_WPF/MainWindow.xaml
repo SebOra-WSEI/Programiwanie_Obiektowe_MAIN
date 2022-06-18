@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <WrapPanel Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Content="Text"  Margin="10,0,0,0" Width="40"/>
+            <Button Content="Bash" Margin="10,0,0,0" Width="40"/>
+            <Button Content="C++"  Margin="10,0,0,0" Width="40"/>
+            <Button Content="C#" Margin="10,0,0,0" Width="40"/>
+            <Button Content="Java"  Margin="10,0,0,0" Width="40"/>
+            <Button Content="CSS" Margin="10,0,0,0" Width="40"/>
+            <Button Content="HTML" Margin="10,0,0,0" Width="40"/>
+            <Button Content="Java Script" Margin="10,0,0,0" Width="70"/>
+            <Button Content="PHP" Margin="10,0,0,0" Width="40"/>
+            <Button Content="Python" Margin="10,0,0,0" Width="40"/>
+            <Button Content="SQL" Margin="10,0,0,0" Width="40"/>
+        </WrapPanel>
+        <DataGrid Margin="0,186,0,0" x:Name="gridSnippet" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Snippet Name" Width="3*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Snippet Type" Width="*" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Update Time" Width="*" Binding="{Binding UpdateTime}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
