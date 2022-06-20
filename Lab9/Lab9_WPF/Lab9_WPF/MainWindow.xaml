@@ -7,20 +7,156 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <WrapPanel Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Button Content="Text"  Margin="10,0,0,0" Width="40"/>
-            <Button Content="Bash" Margin="10,0,0,0" Width="40"/>
-            <Button Content="C++"  Margin="10,0,0,0" Width="40"/>
-            <Button Content="C#" Margin="10,0,0,0" Width="40"/>
-            <Button Content="Java"  Margin="10,0,0,0" Width="40"/>
-            <Button Content="CSS" Margin="10,0,0,0" Width="40"/>
-            <Button Content="HTML" Margin="10,0,0,0" Width="40"/>
-            <Button Content="Java Script" Margin="10,0,0,0" Width="70"/>
-            <Button Content="PHP" Margin="10,0,0,0" Width="40"/>
-            <Button Content="Python" Margin="10,0,0,0" Width="40"/>
-            <Button Content="SQL" Margin="10,0,0,0" Width="40"/>
-        </WrapPanel>
-        <DataGrid Margin="0,186,0,0" x:Name="gridSnippet" AutoGenerateColumns="False">
+        <Grid>
+            <WrapPanel Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Button Content="Text"  Margin="10,0,0,0" Width="45" Click="Btn_Text_Click" Background="LightGray" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Bash" Margin="10,0,0,0" Width="45" Click="Btn_Bash_Click" Background="Lime" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="C++"  Margin="10,0,0,0" Width="45" Click="Btn_Cpp_Click" Background="Blue" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="C#" Margin="10,0,0,0" Width="45" Click="Btn_CSharp_Click" Background="MediumPurple" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Java"  Margin="10,0,0,0" Width="45" Click="Btn_Java_Click" Background="BlueViolet" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="CSS" Margin="10,0,0,0" Width="45" Click="Btn_CSS_Click" Background="LightBlue" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="HTML" Margin="10,0,0,0" Width="45" Click="Btn_HTML_Click" Background="Orange" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Java Script" Margin="10,0,0,0" Width="70" Click="Btn_JS_Click" Background="Yellow" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="PHP" Margin="10,0,0,0" Width="45" Click="Btn_PHP_Click" Background="LightSlateGray" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Python" Margin="10,0,0,0" Width="45" Click="Btn_Python_Click"  Background="Yellow" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="SQL" Margin="10,0,0,0" Width="45" Click="Btn_SQL_Click" BorderThickness="0" Height="20">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </WrapPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Right">
+            <WrapPanel  Margin="0,100,10,0" VerticalAlignment="Top">
+                <Label Content="Page Number" Margin="0,-25,-200,0" FontSize="18" FontFamily="Microsoft Himalaya" HorizontalAlignment="Center"/>
+                <Button Content="1" Margin="0,0,5,0" Width="25" Click="Btn_One_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="2" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="3" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="4" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="5" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="6" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="7" Margin="0,0,5,0" Width="25" Click="Btn_SQL_Click" Background="White" BorderThickness="2" BorderBrush="SkyBlue">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Content="Page Size" Margin="0,-25,-90,0" FontSize="18" FontFamily="Microsoft Himalaya" HorizontalAlignment="Center" />
+                <ComboBox SelectedIndex="0" Margin="25,0,5,0" x:Name="comboBoxPageSize" Width="45" Height="23" FontSize="13" BorderThickness="0" BorderBrush="SkyBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedValuePath="Content">
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="20"/>
+                </ComboBox>
+                <Button Content="Refresh" Margin="10,0,5,0" Width="50" Click="Btn_LoadPageSizeData" Background="LightGreen" BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </WrapPanel>
+        </Grid>
+        <DataGrid Margin="0,150,0,0" x:Name="gridSnippet" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Snippet Name" Width="3*" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Snippet Type" Width="*" Binding="{Binding Type}"/>
