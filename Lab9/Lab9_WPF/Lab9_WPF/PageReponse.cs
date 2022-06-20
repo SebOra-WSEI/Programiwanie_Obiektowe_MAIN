@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Lab9_WPF
 {
-    public class PageReposne
+    public class PageReponse
     {
         [JsonPropertyName("pageNumber")]
         public int PageNumber { get; set; }
